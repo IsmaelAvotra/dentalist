@@ -1,0 +1,529 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Eudoxus Sans';
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #583fbc;
+  border: none;
+  border-radius: 0.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.5s ease-in-out;
+}
+span {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #583fbc;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+}
+
+/* navigation  */
+
+header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  gap: 3rem;
+}
+
+header ul a {
+  color: #191945;
+  line-height: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: 0.4s ease-in-out;
+}
+
+header ul a:hover {
+  color: #583fbc;
+}
+
+header .icon {
+  width: 2rem;
+  display: none;
+}
+
+footer {
+  background-color: #041434;
+  color: #ffffff;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+/* banner */
+.banner {
+  background-color: #c1deef;
+  border-radius: 2.5rem;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem 5rem 0 5rem;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.banner .left h1 {
+  font-size: 3.5rem;
+  color: #181945;
+  line-height: 4.5rem;
+  margin-bottom: 1.5rem;
+}
+.banner .left .desc {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #181945;
+  margin-bottom: 2rem;
+  opacity: 0.7;
+}
+
+.banner .left .buttons {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.banner .left .buttons .btn {
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.banner .left .buttons .call {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner .left .buttons .call .info {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.banner .left .buttons .call .info span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  color: #583fbc;
+}
+.banner .left .buttons .call .info p {
+  font-weight: 700;
+  line-height: 22px;
+  color: #181945;
+}
+
+.banner .right .image {
+  position: relative;
+}
+.banner .right .image .doc {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  color: #181945;
+  position: absolute;
+  bottom: 2rem;
+  left: -5rem;
+}
+.banner .right .image .doc p {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.banner .right .image .doc span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.banner .right .dent,
+.banner .right .vrai {
+  position: absolute;
+}
+.banner .right .dent {
+  top: 4rem;
+  left: -4rem;
+  width: 5rem;
+}
+.banner .right .vrai {
+  bottom: 4rem;
+  width: 5rem;
+  right: -4rem;
+}
+
+.slogan {
+  text-align: center;
+  padding: 4rem 8rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.slogan p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #181945;
+  line-height: 150%;
+}
+
+.slogan div {
+  width: 12rem;
+  height: 0.5rem;
+  background-color: #583fbc;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+form .name-email {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+form .name-email .name {
+  flex: 1;
+}
+form .name-email .email {
+  flex: 1;
+}
+form .name-email .name,
+form .name-email .email {
+  display: flex;
+  flex-direction: column;
+}
+form .services-department {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+form .services-department .services-class {
+  flex: 1;
+}
+form .services-department .department {
+  flex: 1;
+}
+form .services-department .services-class,
+form .services-department .department {
+  display: flex;
+  flex-direction: column;
+}
+form .message {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+form .name-email input {
+  width: 80%;
+  height: 2.5rem;
+  border: 1px solid rgba(24, 25, 69, 0.1);
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+}
+form .name-email input:focus,
+form textarea:focus {
+  background-color: aliceblue;
+}
+
+form label {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(24, 25, 69, 0.6);
+  margin-bottom: 0.4rem;
+}
+
+.selected select {
+  width: 80%;
+  height: 2.5rem;
+  text-transform: capitalize;
+  color: #181945;
+  opacity: 0.8;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(24, 25, 69, 0.1);
+}
+
+form textarea {
+  width: 80%;
+  padding: 0.5rem;
+  height: 10rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(24, 25, 69, 0.1);
+  resize: none;
+  margin-bottom: 2.5rem;
+}
+
+footer .left {
+  flex: 5;
+  padding-right: 2rem;
+}
+footer .left .desc {
+  margin: 0.5rem 0 3rem 0;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+footer .left .socials span {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+footer .left .socials .icons {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+footer .left .socials .icons img {
+  transform: scale(1);
+  transition: 0.4s ease-in-out;
+}
+footer .left .socials .icons img:hover {
+  transform: scale(1.1);
+}
+
+footer .mid {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .mid p {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+footer .mid a {
+  text-transform: capitalize;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+footer .mid a:hover {
+  color: #583fbc;
+}
+
+footer .right {
+  flex: 3;
+}
+footer .right p:first-child {
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+footer .right .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .right .contact .phone,
+footer .right .contact .time,
+footer .right .contact .location {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+footer .right .contact .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer .right .contact .info span {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+/* media queries */
+
+@media screen and (max-width: 1025px) {
+  header ul {
+    gap: 2rem;
+  }
+  header .icon {
+    display: none;
+  }
+  .banner {
+    padding: 2rem 2rem 0 2rem;
+    gap: 2rem;
+  }
+  .banner .left .buttons {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .banner .right .dent {
+    top: 4rem;
+    left: -1rem;
+    width: 4rem;
+  }
+  .banner .right .vrai {
+    bottom: 4rem;
+    width: 4.5rem;
+    right: -1rem;
+  }
+
+  footer {
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header {
+    padding: 0.6rem 1.5rem;
+    position: relative;
+    position: sticky;
+    top: 0rem;
+    z-index: 2;
+  }
+  header .btn {
+    display: none;
+  }
+  header .icon {
+    display: block;
+  }
+  .banner {
+    flex-direction: column;
+    padding: 2rem 1rem 0 1rem;
+    gap: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin: 0 0.5rem;
+  }
+  .banner .left h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .banner .left .desc {
+    font-size: 0.9rem;
+  }
+  .banner .left .buttons {
+    flex-direction: row;
+  }
+  .banner .right .dent {
+    width: 5rem;
+  }
+  .banner .right .vrai {
+    width: 5rem;
+    right: -2rem;
+  }
+
+  .banner .right .doc {
+    left: 5rem;
+  }
+  .slogan {
+    padding: 3rem 4rem;
+  }
+  .slogan p {
+    font-size: 1.8rem;
+  }
+  .slogan div {
+    width: 10rem;
+  }
+  footer .left .desc {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  footer .mid {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .icon {
+    width: 1.4rem;
+  }
+  .banner {
+    padding: 1.5rem 0.5rem 0 0.5rem;
+    margin: 0rem;
+  }
+  footer .left .desc {
+    font-size: 0.7rem;
+  }
+  .banner .left .buttons {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+  .banner .left .buttons .btn {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+  .banner .left .buttons .call {
+    gap: 0.4rem;
+  }
+  .banner .left .buttons .call .info {
+    gap: 0rem;
+  }
+  .banner .left .buttons .call .info span,
+  .banner .left .buttons .call .info p {
+    font-size: 0.7rem;
+  }
+  .banner .right .image .doc {
+    left: 2rem;
+    bottom: 0.5rem;
+  }
+  .banner .right .dent,
+  .right .vrai {
+    display: none;
+  }
+  .banner .right .image .img-banner {
+    width: 100%;
+  }
+  .slogan {
+    padding: 3rem 1rem;
+    gap: 0.8rem;
+  }
+  .slogan p {
+    font-size: 1.4rem;
+  }
+  .slogan div {
+    width: 6rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .left .logo img {
+    width: 8.5rem;
+  }
+  footer .left .desc {
+    margin-bottom: 1rem;
+  }
+  footer .left .socials {
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,87 @@
+---
+const { title } = Astro.props
+import '../styles/style.css'
+import footlogo from '../assets/footlogo.png'
+import fb from '../assets/fb.png'
+import twit from '../assets/twit.png'
+import insta from '../assets/insta.png'
+import phone from '../assets/phone.png'
+import hour from '../assets/hour.png'
+import location from '../assets/location.png'
+import Nav from '../components/layoutsComponent/Nav.jsx'
+import logo from '../assets/logo.png'
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <!-- navigation  -->
+  <body>
+    <header>
+      <a href='/'>
+        {' '}
+        <img src={logo} alt='logo' />
+      </a>
+      <Nav client:load />
+      <button class='btn'>Book appoitment</button>
+    </header>
+    <slot />
+    <footer>
+      <div class='left'>
+        <a href='/' class='logo'><img src={footlogo} alt='logo' /></a>
+        <p class='desc'>
+          Dental Care Seattle is a top-rated local practice for cosmetic,
+          preventative, and restorative dentistry on First Hill
+        </p>
+        <div class='socials'>
+          <span>follow us on</span>
+          <div class='icons'>
+            <a href='/'> <img src={fb} /></a>
+            <a href='/'> <img src={twit} /></a>
+            <a href='/'> <img src={insta} /></a>
+          </div>
+        </div>
+      </div>
+      <div class='mid'>
+        <p>Quick Links</p>
+        <a href='/about'>about us</a>
+        <a href='/service'>Dental services</a>
+        <a href='/about'>Dentist</a>
+        <a href='/blogs'>blog</a>
+        <a href='/about'>FAQs</a>
+      </div>
+      <div class='right'>
+        <p class='title'>Contact & Information</p>
+        <div class='contact'>
+          <div class='phone'>
+            <img src={phone} />
+            <div class='info'>
+              <span>Phone Number</span>
+              <p>+088 123 654 987</p>
+            </div>
+          </div>
+          <div class='time'>
+            <img src={hour} />
+            <div class='info'>
+              <span>Open Hour</span>
+              <p>09:00 AM - 18:00 PM</p>
+            </div>
+          </div>
+          <div class='location'>
+            <img src={location} />
+            <div class='info'>
+              <span>Clinic Address</span>
+              <p>35 West Dental Street California 1004</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

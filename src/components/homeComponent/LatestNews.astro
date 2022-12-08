@@ -1,0 +1,34 @@
+---
+import './LatestNews.css'
+import { latestNews } from '../../data'
+const { titleSpan, title, blogs } = latestNews
+---
+
+<div class='latestNews'>
+  <div class='blog-heading'>
+    <span>{titleSpan}</span>
+    <h2>{title}</h2>
+  </div>
+  <div class='blogs'>
+    {
+      blogs.map(({ image, name, blogTitle, text }) => {
+        return (
+          <div class='blog'>
+            <div class='top'>
+              <img src={image} />
+              <div class='date'>
+                <strong>23</strong>
+                <p>Janv</p>
+              </div>
+            </div>
+            <div class='bottom'>
+              <span>{name}</span>
+              <h4>{blogTitle}</h4>
+              <p>{text}</p>
+            </div>
+          </div>
+        )
+      })
+    }
+  </div>
+</div>

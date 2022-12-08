@@ -1,0 +1,30 @@
+.questions {
+  border-top: 2px solid #583fbc;
+}
+.question-response {
+  border-bottom: 1px solid #96a0b5;
+}
+
+.question-response .question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.question-response .question h4 {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #121f3e;
+}
+.question-response .question svg {
+  font-size: 1.3rem;
+  color: #583fbc;
+  cursor: pointer;
+}
+
+.question-response p {
+  color: #96a0b5;
+  font-size: 1rem;
+}

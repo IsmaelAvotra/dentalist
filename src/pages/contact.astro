@@ -1,0 +1,33 @@
+---
+import './contact.css'
+import Form from '../components/homeComponent/Form.astro'
+import Layout from '../layouts/Layout.astro'
+
+import contact1 from '../assets/contact1.png'
+import contact2 from '../assets/contact2.png'
+---
+
+<Layout title='Contact Page'>
+  <main class='contact'>
+    <div class='contact-us'>
+      <div class='title'>
+        <h2>Contact Us</h2>
+        <p>
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts and visual mockups.
+        </p>
+      </div>
+      <Form />
+    </div>
+    <div class='our-clinic'>
+      <div class='title'>
+        <span>OUR CLINIC</span>
+        <h2>Come to our clinic and get best dental services</h2>
+      </div>
+      <div class='photos'>
+        <div class='left'><img src={contact1} alt='' /></div>
+        <div class='right'><img src={contact2} alt='' /></div>
+      </div>
+    </div>
+  </main>
+</Layout>

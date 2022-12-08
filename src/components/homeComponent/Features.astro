@@ -1,0 +1,33 @@
+---
+import './Features.css'
+
+import { features } from '../../data'
+const { titleSpan, title, text, feature } = features
+---
+
+<div class='features'>
+  <div class='desc'>
+    <span>{titleSpan}</span>
+    <h2>{title}</h2>
+    <p>
+      {text}
+    </p>
+  </div>
+  <div class='features-content'>
+    {
+      feature.map(({ image, name, para }) => {
+        return (
+          <div class='feature'>
+            <div class='image'>
+              <img src={image} />
+            </div>
+            <div class='info'>
+              <h4>{name}</h4>
+              <p>{para}</p>
+            </div>
+          </div>
+        )
+      })
+    }
+  </div>
+</div>

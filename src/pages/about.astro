@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro'
+import './about.css'
+import Questions from '../components/aboutComponent/Questions'
+
+import about1 from '../assets/about1.png'
+import about2 from '../assets/about2.png'
+import about3 from '../assets/about3.png'
+
+import { teams } from '../data'
+const { titleSpan, title, text, employees } = teams
+
+import { faq } from '../data'
+const { titleSpanfaq, titlefaq } = faq
+---
+
+<Layout title='about Page'>
+  <main class='about'>
+    <div class='about-us'>
+      <div class='left'>
+        <h2>about us</h2>
+        <p>
+          We want you to feel amazing about your oral wellness. Not just twice a
+          year, but every time you take a bite, tell a joke, laugh, or share a
+          kiss.
+        </p>
+        <button class='btn'>contact us</button>
+      </div>
+      <div class='right'>
+        <img src={about1} alt='' />
+      </div>
+    </div>
+
+    <div class='priority'>
+      <div class='left'>
+        <div class='back'></div>
+        <img src={about2} alt='' />
+      </div>
+      <div class='right'>
+        <span>OUR PRIORITY</span>
+        <h2>Our clients are our priority</h2>
+        <p>
+          Lorem ipsum is placeholder text commonly used in the graphic, print,
+          and publishing industries for previewing layouts and visual mockups.
+        </p>
+        <button class='btn'>Book appointment</button>
+      </div>
+    </div>
+
+    <div class='safety'>
+      <div class='text'>
+        <span>safety</span>
+        <h2>We put the safety first</h2>
+        <p>
+          Lorem ipsum is placeholder text commonly used in the <br /> graphic, print,
+          and publishing industries for previewing layouts <br /> and visual mockups.
+        </p>
+        <img src={about3} alt='' />
+      </div>
+    </div>
+    <div class='teams'>
+      <div class='text'>
+        <div class='left'>
+          <span>{titleSpan}</span>
+          <h2>{title}</h2>
+        </div>
+        <div class='right'>
+          <p>{text}</p>
+        </div>
+      </div>
+      <div class='members'>
+        {
+          employees.map(({ image, name }) => {
+            return (
+              <div class='member'>
+                <img src={image} alt='' />
+                <p>{name}</p>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+
+    <div class='faq'>
+      <div class='title'>
+        <span>{titleSpanfaq}</span>
+        <h2>{titlefaq}</h2>
+      </div>
+      <Questions faq={faq} client:visible />
+    </div>
+  </main>
+</Layout>

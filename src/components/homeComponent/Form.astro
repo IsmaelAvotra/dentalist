@@ -1,0 +1,55 @@
+---
+import { selectServices } from '../../data'
+import { selectDepartment } from '../../data'
+
+const { label, services } = selectServices
+const { labeld, departments } = selectDepartment
+---
+
+<div class='form'>
+  <form>
+    <div class='name-email'>
+      <div class='name'>
+        <label for='name'>Name</label>
+        <input type='text' id='name' required />
+      </div>
+      <div class='email'>
+        <label for='email'>Email adress</label>
+        <input type='email' id='email' required />
+      </div>
+    </div>
+    <div class='services-department'>
+      <div class='services-class'>
+        <label for={label}>{label}</label>
+        <div class='selected'>
+          <select name={label} id={label} required>
+            <option value='' disabled selected>select services</option>
+            {
+              services.map((serv) => {
+                return <option value={serv}>{serv}</option>
+              })
+            }
+          </select>
+        </div>
+      </div>
+      <div class='department'>
+        <label for={labeld}>{labeld}</label>
+        <div class='selected'>
+          <select name={labeld} id={labeld} required>
+            <option value='' disabled selected>select departement</option>
+            {
+              departments.map((dep) => {
+                return <option value={dep}>{dep}</option>
+              })
+            }
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class='message'>
+      <label for='message'>Message</label>
+      <textarea name='message' id='message'></textarea>
+    </div>
+    <button class='btn'>send</button>
+  </form>
+</div>

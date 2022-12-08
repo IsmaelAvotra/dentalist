@@ -1,0 +1,59 @@
+.testimonials {
+  margin-top: 4rem;
+  padding: 4rem 2rem;
+  background: #d9ebfa;
+  border-radius: 3rem;
+}
+.testimonials .title {
+  margin: 0.5rem 0 4rem 0;
+  display: flex;
+  align-items: center;
+}
+.testimonials .title h2 {
+  flex: 1;
+  font-size: 2.8rem;
+  color: #181945;
+}
+.testimonials .title p {
+  padding-left: 10rem;
+  flex: 1;
+  font-weight: 500;
+  color: #181945;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1025px) {
+  .testimonials .title h2 {
+    font-size: 2.4rem;
+  }
+  .testimonials .title p {
+    padding-left: 5rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .testimonials .title h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .testimonials .title p {
+    padding-left: 2rem;
+    font-size: 0.9rem;
+  }
+  .testimonials .title {
+    flex-direction: column;
+    margin: 0.5rem 0 2rem 0;
+    align-items: flex-start;
+    padding-left: 0.5rem;
+  }
+  .testimonials .title p {
+    padding-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .testimonials {
+    margin-top: 2rem;
+    padding: 4rem 1rem;
+    border-radius: 1rem;
+  }
+}

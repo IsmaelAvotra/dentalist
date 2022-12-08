@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro'
+import './blogs.css'
+import { Icon } from 'astro-icon'
+
+import search from '../assets/Search.svg'
+import art1 from '../assets/art1.png'
+
+import { news } from '../data'
+const { titleSpan, title, articles } = news
+---
+
+<Layout title='Blogs'>
+  <main class='blogs'>
+    <div class='articles'>
+      <div class='left'>
+        <h2>News & Articles</h2>
+        <p class='desc'>
+          Stays updated with our latest blog and news and get healthy tips &
+          trick for oral health
+        </p>
+        <input type='search' placeholder='Search article or news...' />
+        <button>
+          <div>
+            <p>Search</p>
+            <img src={search} alt='' />
+          </div>
+        </button>
+      </div>
+
+      <div class='right'>
+        <div></div>
+        <img src={art1} alt='' />
+      </div>
+    </div>
+
+    <div class='news-blogs'>
+      <div class='title'>
+        <span>{titleSpan}</span>
+        <h2>{title}</h2>
+      </div>
+      <div class='blogs-elements'>
+        {
+          articles.map(({ date, image, titleSpan, titleh4, text }) => {
+            return (
+              <div class='blog'>
+                <div class='top'>
+                  <img src={image} />
+                  <div class='date'>
+                    <strong>{date[0]}</strong>
+                    <p>{date[1]}</p>
+                  </div>
+                </div>
+                <div class='bottom'>
+                  <span>{titleSpan}</span>
+                  <h4>{titleh4}</h4>
+                  <p>{text}</p>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+    <div class='button'>
+      <div class='element'>
+        <p>View all blogs</p>
+        <Icon name='akar-icons:circle-chevron-right-fill' class='icon' />
+      </div>
+    </div>
+  </main>
+</Layout>

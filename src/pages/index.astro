@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro'
+import phone from '../assets/phone.png'
+import photoBanner from '../assets/banner.png'
+import dent from '../assets/dent.png'
+import right from '../assets/right.svg'
+import doc from '../assets/doc.png'
+
+import Services from '../components/homeComponent/Services.astro'
+---
+
+<Layout title='Home page'>
+  <main class='home'>
+    <div class='banner'>
+      <div class='left'>
+        <h1>Entrust your smile to professional</h1>
+        <p class='desc'>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure
+          perspiciatis voluptates saepe natus possimus nobis eius reiciendis
+          quidem harum tempora, cumque debitis eos? Sint, eius! Asperiores,
+          placeat maiores? Corrupti asperiores, nobis dicta autem officiis et
+          aliquam minus blanditiis qui aut!
+        </p>
+        <div class='buttons'>
+          <button class='btn'>Book an appointment</button>
+          <div class='call'>
+            <img src={phone} />
+            <div class='info'>
+              <span>Dental 24H Emergency</span>
+              <p>03 482 394 123</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='right'>
+        <div class='image'>
+          <img src={photoBanner} class='img-banner' />
+          <img src={dent} class='dent' />
+          <img src={right} class='vrai' />
+          <div class='doc'>
+            <img src={doc} />
+            <div class='descri'>
+              <p>Dr. Samantha Alice</p>
+              <span>Consultant</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='slogan'>
+      <p>
+        Dentalist is re-imagining what the dental experience can be and proudly
+        setting a new standard for patient care.
+      </p>
+      <div class='underline'></div>
+    </div>
+    <Services />
+  </main>
+</Layout>

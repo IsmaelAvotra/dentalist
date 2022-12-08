@@ -1,0 +1,303 @@
+.root-canals {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  background-color: #dbeffa;
+  margin: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.root-canals .left {
+  flex: 5;
+}
+.root-canals .right {
+  flex: 4;
+}
+
+.root-canals .left h2 {
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #181945;
+  margin-bottom: 1rem;
+}
+
+.root-canals .left p {
+  color: #181945;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  padding-right: 5rem;
+  margin-bottom: 1.5rem;
+}
+.root-canals .left button {
+  padding: 1rem 1.5rem;
+}
+
+.root-canals .right img {
+  width: 100%;
+}
+
+.symptoms {
+  margin-top: 6rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 2rem;
+  background-color: #fadbe2;
+  border-radius: 2rem;
+  margin-bottom: 4rem;
+}
+
+.symptoms .title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.symptoms .title h2 {
+  font-size: 2.8rem;
+  color: #181945;
+  margin-bottom: 1rem;
+}
+.symptoms .title p {
+  padding: 0 15rem;
+  opacity: 0.8;
+}
+
+.symptoms .symptoms-elements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.symptoms .symptoms-elements .symptom {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.symptoms-elements .symptom h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #181945;
+}
+.symptoms-elements .symptom p {
+  color: #181945;
+  opacity: 0.7;
+}
+
+.gallery {
+  margin: 0 2rem;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.gallery .title {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.gallery .title h2 {
+  font-size: 2.8rem;
+  color: #181945;
+}
+.gallery .title p {
+  color: #181945;
+  opacity: 0.8;
+}
+
+.gallery .photos {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery .photos-line1 {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.gallery .photos-line1 img,
+.gallery .photos-line2 img {
+  width: 100%;
+}
+.gallery .photos-line2 {
+  display: flex;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .root-canals .left h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 0.6rem;
+  }
+  .root-canals .left p {
+    font-size: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  .symptoms .title h2 {
+    font-size: 2.5rem;
+  }
+  .symptoms .title p {
+    padding: 0 8rem;
+  }
+  .symptoms-elements .symptom h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+  .symptoms-elements .symptom p {
+    font-size: 0.9rem;
+  }
+
+  .gallery {
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+
+  .gallery .title {
+    gap: 1.5rem;
+  }
+  .gallery .title h2 {
+    font-size: 2.5rem;
+    color: #181945;
+  }
+  .gallery .title p {
+    color: #181945;
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .root-canals {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+  .root-canals .left {
+    margin-bottom: 1.5rem;
+  }
+  .root-canals .left h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .root-canals .left p {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+  .root-canals .left button {
+    padding: 0.8rem 1.2rem;
+  }
+  .symptoms {
+    border-radius: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .symptoms .title h2 {
+    font-size: 2rem;
+  }
+
+  .symptoms .title p {
+    padding: 0 3rem;
+  }
+
+  .symptoms .symptoms-elements {
+    gap: 1rem;
+  }
+  .symptoms .symptoms-elements .symptom {
+    gap: 0.5rem;
+  }
+
+  .gallery {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+  }
+  .gallery .photos-line1,
+  .gallery .photos-line2 {
+    gap: 1rem;
+  }
+  .gallery .photos-line1 {
+    margin-bottom: 1rem;
+  }
+
+  .gallery .title {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .gallery .title h2 {
+    font-size: 2rem;
+  }
+  .gallery .title p {
+    font-size: 0.9rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .root-canals {
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .root-canals .left h2 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+  .root-canals .left p {
+    font-size: 0.8rem;
+    padding-right: 0rem;
+  }
+  .symptoms {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+  .symptoms .title {
+    margin-bottom: 1.5rem;
+  }
+  .symptoms .title h2 {
+    font-size: 1.8rem;
+  }
+  .symptoms .title p {
+    padding: 0;
+    font-size: 0.8rem;
+  }
+  .symptoms .symptoms-elements {
+    grid-template-columns: 1fr;
+  }
+
+  .symptoms-elements .symptom .left img {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .symptoms-elements .symptom h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .symptoms-elements .symptom p {
+    font-size: 0.8rem;
+  }
+
+  .gallery .title {
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+    gap: 0.3rem;
+  }
+  .gallery .title h2 {
+    font-size: 1.8rem;
+  }
+  .gallery .title p {
+    font-size: 0.8rem;
+    padding-right: 0rem;
+  }
+
+  .gallery .photos-line1,
+  .gallery .photos-line2 {
+    flex-wrap: wrap;
+  }
+}

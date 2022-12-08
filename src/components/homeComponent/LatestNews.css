@@ -1,0 +1,101 @@
+.latestNews {
+  margin-top: 4rem;
+}
+.blog-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+}
+.blog-heading h2 {
+  font-size: 2.8rem;
+  color: #181945;
+}
+
+.latestNews .blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+.latestNews .blogs .blog {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(24, 25, 69, 0.1);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.latestNews .blogs .blog:hover {
+  border: 1px solid #583fbc;
+}
+.latestNews .blogs .blog .top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.blogs .blog .top img {
+  width: 100%;
+}
+.latestNews .blogs .blog .top .date {
+  background-color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  text-align: center;
+  border-radius: 0.8rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.top .date strong {
+  font-size: 1.4rem;
+  color: #181945;
+}
+.top .date p {
+  color: #181945;
+  opacity: 0.6;
+}
+
+.latestNews .blogs .blog .bottom {
+  padding: 1rem 1rem 2rem 1rem;
+}
+.blogs .blog .bottom span {
+  font-weight: 600;
+}
+.blogs .blog .bottom h4 {
+  color: #181945;
+  font-size: 1.1rem;
+  margin: 0.3rem 0 0.6rem 0;
+}
+.blogs .blog .bottom p {
+  color: #181945;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1025px) {
+  .latestNews .blogs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 850px) {
+  .blog-heading h2 {
+    font-size: 2.4rem;
+  }
+  .latestNews .blogs {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .latestNews .blogs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .latestNews .blogs {
+    padding: 0.6rem;
+  }
+  .blog-heading h2 {
+    font-size: 2.2rem;
+  }
+}

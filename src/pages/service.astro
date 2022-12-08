@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro'
+import './service.css'
+
+import serv1 from '../assets/serv1.png'
+
+import { symptoms } from '../data'
+const { title, titleSpan, text, symptom } = symptoms
+
+import gal1 from '../assets/gal1.png'
+import gal2 from '../assets/gal2.png'
+import gal3 from '../assets/gal3.png'
+import gal4 from '../assets/gal4.png'
+import gal5 from '../assets/gal5.png'
+import gal6 from '../assets/gal6.png'
+
+import BookApoitment from '../components/homeComponent/BookApoitment.astro'
+---
+
+<Layout title='Service Page'>
+  <main class='service-page'>
+    <div class='root-canals'>
+      <div class='left'>
+        <h2>Root canals</h2>
+        <p>
+          Root canals have gotten a bad reputation, but us dentists don’t know
+          why! These are the types of treatments that actually make you feel
+          better!
+        </p>
+        <button class='btn'>Book appointment</button>
+      </div>
+      <div class='right'>
+        <img src={serv1} alt='' />
+      </div>
+    </div>
+    <div class='symptoms'>
+      <div class='title'>
+        <span>{titleSpan}</span>
+        <h2>{title}</h2>
+        <p>{text}</p>
+      </div>
+      <div class='symptoms-elements'>
+        {
+          symptom.map(({ image, name, desc }) => {
+            return (
+              <div class='symptom'>
+                <div class='left'>
+                  <img src={image} alt='' />
+                </div>
+                <div class='right'>
+                  <h4>{name}</h4>
+                  <p>{desc}</p>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+    <div class='gallery'>
+      <div class='title'>
+        <div class='left'>
+          <span>GALLERY</span>
+          <h2>Some proof about our services for you</h2>
+        </div>
+        <div class='right'>
+          <p>
+            Lorem ipsum is placeholder text commonly used in the graphic, print,
+            and publishing industries for previewing layouts and visual mockups.
+          </p>
+        </div>
+      </div>
+      <div class='photos'>
+        <div class='photos-line1'>
+          <div class='left'>
+            <img src={gal1} alt='' />
+          </div>
+          <div class='mid'>
+            <img src={gal2} alt='' />
+          </div>
+          <div class='right'>
+            <img src={gal3} alt='' />
+          </div>
+        </div>
+        <div class='photos-line2'>
+          <div class='left'>
+            <img src={gal4} alt='' />
+          </div>
+          <div class='mid'>
+            <img src={gal5} alt='' />
+          </div>
+          <div class='right'>
+            <img src={gal6} alt='' />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <BookApoitment />
+  </main>
+</Layout>

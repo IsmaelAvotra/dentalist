@@ -1,0 +1,55 @@
+.nav svg {
+  color: #181945;
+  font-size: 1.8rem;
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .nav nav {
+    display: block;
+    position: absolute;
+    background-color: #fafafa;
+    border-radius: 0 0 0 0.5rem;
+    width: 35%;
+    height: 20rem;
+    right: 0;
+    top: 2.8rem;
+    z-index: 2;
+    transform: translateY(-120%);
+    transition: 0.5s;
+  }
+  .nav nav.active {
+    transform: translateY(0);
+  }
+  .nav nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+  }
+  .nav nav ul a {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .nav svg {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav nav {
+    width: 45%;
+    height: 16rem;
+  }
+  .nav svg {
+    font-size: 1.6rem;
+  }
+  .nav nav ul a {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+  .nav nav ul {
+    padding-top: 2rem;
+  }
+}

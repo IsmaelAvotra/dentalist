@@ -1,0 +1,63 @@
+---
+import { services } from '../../data'
+const { titleSpan, title, text, service } = services
+import { Icon } from 'astro-icon'
+import emergencyImg from '../../assets/emergency.png'
+import './Services.css'
+import Features from './Features.astro'
+import Expert from './Expert.astro'
+import Testimonials from './Testimonials'
+import LatestNews from './LatestNews.astro'
+import BookApoitment from './BookApoitment.astro'
+---
+
+<div class='service'>
+  <span>{titleSpan}</span>
+  <div class='description'>
+    <h2>{title}</h2>
+    <p>{text}</p>
+  </div>
+  <div class='services'>
+    {
+      service.map(({ image, name, para }) => {
+        return (
+          <div class='serv'>
+            <div class='top'>
+              <img src={image} />
+            </div>
+            <div class='bottom'>
+              <h3>{name}</h3>
+              <p>{para}</p>
+            </div>
+          </div>
+        )
+      })
+    }
+  </div>
+  <div class='button'>
+    <div class='element'>
+      <p>View all service list</p>
+      <Icon name='akar-icons:circle-chevron-right-fill' class='icon' />
+    </div>
+  </div>
+  <div class='emergency'>
+    <div class='left'>
+      <div></div>
+      <img src={emergencyImg} />
+    </div>
+    <div class='right'>
+      <span>Dental 24H Emergency</span>
+      <h2>Gentle, friendly treatment from our locally practice.</h2>
+      <p>
+        Lorem ipsum is placeholder text commonly used in the graphic, print, and
+        publishing industries for previewing layouts and visual mockups.
+      </p>
+      <button class='btn'>Book an appointment</button>
+    </div>
+  </div>
+  <Features />
+  <Expert />
+  <Testimonials client:visible />
+  <LatestNews />
+  <BookApoitment />
+</div>

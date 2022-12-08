@@ -1,0 +1,220 @@
+.service {
+  padding: 2rem;
+}
+
+.service .description {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.service .description h2 {
+  flex: 1;
+  font-size: 2.8rem;
+}
+.service .description p {
+  flex: 1;
+  padding: 2rem 5rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 3.5rem;
+}
+.services .serv {
+  background-color: #ffffff;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  filter: drop-shadow(0px 64px 96px rgba(24, 25, 69, 0.1));
+  transform: scale(0.95);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.services .serv:hover {
+  transform: scale(1);
+}
+.services .serv .top {
+  display: grid;
+  place-items: center;
+  padding: 2.5rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+.services .serv:first-child .top {
+  background: #dbeffa;
+}
+.services .serv:nth-child(2) .top {
+  background: #dbdefa;
+}
+.services .serv:nth-child(3) .top {
+  background: #f6dbfa;
+}
+.services .serv:nth-child(4) .top {
+  background: #fadbe2;
+}
+
+.services .serv .bottom {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+  color: #181945;
+}
+.services .serv .bottom h3 {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+}
+.services .serv .bottom p {
+  opacity: 0.5;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.service .button {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service .button .element {
+  background: rgba(88, 63, 188, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  color: #583fbc;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.service .button .element:hover {
+  gap: 1.2rem;
+  cursor: pointer;
+}
+.service .button .icon {
+  width: 1.5rem;
+}
+
+.emergency {
+  display: flex;
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+.emergency .left {
+  flex: 1;
+  position: relative;
+}
+.emergency .left div {
+  width: 24rem;
+  height: 28rem;
+  background: #dbeffa;
+  border-radius: 2rem;
+}
+.emergency .left img {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.emergency .right {
+  margin-top: 3rem;
+  flex: 1;
+}
+.emergency .right h2 {
+  font-size: 2.5rem;
+  line-height: 3.4rem;
+  margin: 1rem 0;
+}
+.emergency .right p {
+  margin-bottom: 2rem;
+}
+.emergency .right .btn {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .services {
+    margin-top: 2rem;
+  }
+  .services .serv .bottom {
+    padding: 1rem 0.5rem;
+  }
+  .emergency {
+    padding: 0 1rem;
+    display: flex;
+    gap: 4rem;
+  }
+  .emergency .left div {
+    display: none;
+  }
+  .emergency .left {
+    flex: 1;
+  }
+  .emergency .left img {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+  .emergency .right {
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .service .description h2 {
+    font-size: 2rem;
+  }
+  .service .description p {
+    padding: 1rem 2rem;
+  }
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .services .serv {
+    transform: scale(1);
+  }
+  .emergency {
+    padding: 0;
+    gap: 2rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .service {
+    padding: 1rem 0.8rem;
+  }
+  .service .description {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0;
+    gap: 0.5rem;
+  }
+  .service .description p {
+    padding: 0 0rem 0 0;
+    font-size: 0.9rem;
+  }
+  .services {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .services .serv .top {
+    padding: 4rem 0.5rem;
+  }
+  .emergency {
+    margin-top: 2rem;
+  }
+  .emergency .right h2 {
+    font-size: 2rem;
+    line-height: 120%;
+    margin: 0.5rem 0;
+  }
+  .emergency .right p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+}

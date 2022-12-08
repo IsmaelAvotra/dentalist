@@ -1,0 +1,30 @@
+---
+import './Expert.css'
+
+import { Icon } from 'astro-icon'
+
+import { expert } from '../../data'
+const { titleSpan, title, image, text, lists } = expert
+---
+
+<div class='expert'>
+  <div class='left'>
+    <span>{titleSpan}</span>
+    <h2>{title}</h2>
+    <p class='text'>{text}</p>
+    {
+      lists.map((li) => {
+        return (
+          <div class='list'>
+            <Icon name='akar-icons:circle-check-fill' class='icon' />
+            <p>{li}</p>
+          </div>
+        )
+      })
+    }
+  </div>
+  <div class='right'>
+    <div></div>
+    <img src={image} />
+  </div>
+</div>
